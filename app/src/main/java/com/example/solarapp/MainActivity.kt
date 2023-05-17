@@ -40,14 +40,19 @@ class MainActivity : AppCompatActivity() {
 
     }
 
+        webView.webViewClient = WebViewClient()
+        webView.loadUrl("https://alekd1.github.io/solar")
+        webView.settings.javaScriptEnabled=true
+        webView.settings.setSupportZoom(true)
+
         btn.setOnClickListener {
             val activeNetwork : NetworkInfo? = connectionManager.activeNetworkInfo
             val isConnected:Boolean = activeNetwork?.isConnectedOrConnecting == true
             if (isConnected){
-                webView.visibility = View.VISIBLE
                 img.visibility = View.INVISIBLE
                 txt.visibility = View.INVISIBLE
                 btn.visibility = View.INVISIBLE
+                webView.visibility = View.VISIBLE
             } else {
                 webView.visibility = View.INVISIBLE
                 img.visibility = View.VISIBLE
@@ -58,10 +63,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
-        webView.webViewClient = WebViewClient()
-        webView.loadUrl("https://alekd1.github.io/solar")
-        webView.settings.javaScriptEnabled=true
-        webView.settings.setSupportZoom(true)
+
 
     }
 }
