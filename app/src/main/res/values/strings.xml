@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Космос внутри нас</string>
+    <string name="text_error">Данное приложение работает исключительно через Интернет. Пожалуйста, подключитесь к сети.</string>
+    <string name="but_name">Обновить</string>
+</resources>
